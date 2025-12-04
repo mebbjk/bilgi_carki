@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Bilgi Çarkı - 4. Sınıf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+              story: ['Lora', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap&subset=latin-ext');
+      
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: #f0f9ff;
+        overscroll-behavior: none;
+      }
+      
+      .font-story {
+        font-family: 'Lora', serif;
+      }
+      
+      /* Hide scrollbar for clean mobile look */
+      
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .wheel-container {
+        filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.6",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/bilgi_carki/assets/index-R-3Tyqez.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+</body>
+</html>
