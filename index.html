@@ -12,7 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Browser ortamında 'process' hatasını önlemek için tanımlama
-      window.process = { env: { NODE_ENV: 'production' } };
+      if (typeof process === 'undefined') {
+        window.process = { env: { NODE_ENV: 'production' } };
+      }
       
       tailwind.config = {
         theme: {
@@ -48,10 +50,9 @@
         filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
       }
     </style>
-<link rel="stylesheet" href="/index.css">
   <script type="module" crossorigin src="./assets/index-CSg9xxBD.js"></script>
 </head>
   <body>
     <div id="root"></div>
-</body>
+  </body>
 </html>
