@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Bilgi Çarkı - 4. Sınıf</title>
-    <link rel="manifest" href="./assets/manifest-qxMzofUu.json" />
+    <link rel="manifest" href="./assets/manifest-Fd1ayK6x.json" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5726/5726678.png" />
     <meta name="theme-color" content="#4f46e5">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       // Browser ortamında 'process' hatasını önlemek için tanımlama
-      window.process = { env: {} };
+      window.process = { env: { NODE_ENV: 'production' } };
       
       tailwind.config = {
         theme: {
@@ -49,7 +50,7 @@
     </style>
 
 <link rel="stylesheet" href="/index.css">
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.1",
