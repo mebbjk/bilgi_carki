@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
   <head>
@@ -7,6 +8,8 @@
     <link rel="manifest" href="./assets/manifest-Dmywxra2.json" />
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5726/5726678.png" />
     <meta name="theme-color" content="#4f46e5">
+    <!-- Force light mode for consistent UI -->
+    <meta name="color-scheme" content="light">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,9 +33,16 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap&subset=latin-ext');
       
+      /* Explicitly set light mode colors to override system dark mode */
+      
+      :root {
+        color-scheme: light;
+      }
+      
       body {
         font-family: 'Quicksand', sans-serif;
-        background-color: #f0f9ff;
+        background-color: #f0f9ff !important;
+        color: #111827 !important;
         overscroll-behavior: none;
       }
       
@@ -70,7 +80,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-CYBxgXgI.js"></script>
+  <script type="module" crossorigin src="./assets/index-CvMcAyYe.js"></script>
 </head>
   <body>
     <div id="root"></div>
