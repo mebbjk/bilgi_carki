@@ -3,20 +3,33 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bilgi Çarkı - 4. Sınıf</title>
     <link rel="manifest" href="./assets/manifest-Dmywxra2.json" />
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5726/5726678.png" />
     <meta name="theme-color" content="#4f46e5">
-    <!-- Force light mode for consistent UI -->
     <meta name="color-scheme" content="light">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Güncel Mobile Web App Etiketleri -->
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Bilgi Çarkı">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      // Browser ortamında 'process' hatasını önlemek için tanımlama
+      // Ortam değişkenleri kontrolü ve varsayılan değerler
       if (typeof process === 'undefined') {
-        window.process = { env: { NODE_ENV: 'production' } };
+        window.process = { 
+          env: { 
+            NODE_ENV: 'production',
+            VITE_FIREBASE_API_KEY: '',
+            VITE_FIREBASE_AUTH_DOMAIN: '',
+            VITE_FIREBASE_PROJECT_ID: '',
+            VITE_FIREBASE_STORAGE_BUCKET: '',
+            VITE_FIREBASE_MESSAGING_SENDER_ID: '',
+            VITE_FIREBASE_APP_ID: ''
+          } 
+        };
       }
       
       tailwind.config = {
@@ -25,6 +38,18 @@
             fontFamily: {
               sans: ['Quicksand', 'sans-serif'],
               story: ['Lora', 'serif'],
+            },
+            animation: {
+              'bounce-short': 'bounce 0.5s ease-in-out 1',
+              'star-fall': 'starFall 2s ease-out forwards',
+              'spin-slow': 'spin 8s linear infinite',
+            },
+            keyframes: {
+              starFall: {
+                '0%': { transform: 'translateY(-20px) scale(0)', opacity: '0' },
+                '20%': { opacity: '1' },
+                '100%': { transform: 'translateY(100px) scale(1.5)', opacity: '0' },
+              }
             }
           }
         }
@@ -32,12 +57,6 @@
     </script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap&subset=latin-ext');
-      
-      /* Explicitly set light mode colors to override system dark mode */
-      
-      :root {
-        color-scheme: light;
-      }
       
       body {
         font-family: 'Quicksand', sans-serif;
@@ -50,8 +69,6 @@
         font-family: 'Lora', serif;
       }
       
-      /* Hide scrollbar for clean mobile look */
-      
       ::-webkit-scrollbar {
         display: none;
       }
@@ -59,9 +76,13 @@
       .wheel-container {
         filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
       }
+      
+      .star-particle {
+        position: absolute;
+        pointer-events: none;
+      }
     </style>
 
-<link rel="stylesheet" href="/index.css">
 <script type="importmap">
 {
   "imports": {
@@ -80,7 +101,8 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-D_acP8u-.js"></script>
+  <script type="module" crossorigin src="./assets/index-CtpvV6ub.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C-n8OdEa.css">
 </head>
   <body>
     <div id="root"></div>
