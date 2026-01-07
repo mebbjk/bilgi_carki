@@ -111,7 +111,7 @@ const AboutModal: React.FC<AboutModalProps> = ({ onClose, t }) => {
           )}
 
           <div className="mt-8 text-xs text-slate-400 flex items-center justify-center gap-1">
-            {t.about_footer} <Heart size={10} className="text-red-500 fill-red-500" /> v3.0.2
+            {t.about_footer} <Heart size={10} className="text-red-500 fill-red-500" /> v3.0.4
           </div>
 
         </div>

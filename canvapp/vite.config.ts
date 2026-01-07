@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: '/Canvapp/', // Base URL matches your GitHub repository name
+    base: '/Canvapp/', // Fixed: Matches your GitHub Repo name specifically
     define: {
       // Vital for making process.env.API_KEY available in the client-side code
       'process.env.API_KEY': JSON.stringify(env.API_KEY)
