@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Instagram, Mail, Copy, ArrowLeft, Heart, Camera } from 'lucide-react';
+import { X, Instagram, Mail, Copy, ArrowLeft, Heart } from 'lucide-react';
 
 interface AboutModalProps {
   onClose: () => void;
