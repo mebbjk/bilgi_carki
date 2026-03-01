@@ -1,93 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="tr">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bilgi Çarkı - 4. Sınıf</title>
-  <link rel="manifest" href="./assets/manifest-Xp1FEhYB.json" />
-  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5726/5726678.png" />
-  <meta name="theme-color" content="#4f46e5">
-  <meta name="color-scheme" content="light">
-
-  <!-- Güncel Mobile Web App Etiketleri -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Bilgi Çarkı">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Ortam değişkenleri kontrolü ve varsayılan değerler
-    if (typeof process === 'undefined') {
-      window.process = {
-        env: {
-          NODE_ENV: 'production',
-          VITE_FIREBASE_API_KEY: '',
-          VITE_FIREBASE_AUTH_DOMAIN: '',
-          VITE_FIREBASE_PROJECT_ID: '',
-          VITE_FIREBASE_STORAGE_BUCKET: '',
-          VITE_FIREBASE_MESSAGING_SENDER_ID: '',
-          VITE_FIREBASE_APP_ID: ''
-        }
-      };
-    }
-
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Quicksand', 'sans-serif'],
-            story: ['Lora', 'serif'],
-          },
-          animation: {
-            'bounce-short': 'bounce 0.5s ease-in-out 1',
-            'star-fall': 'starFall 2s ease-out forwards',
-            'spin-slow': 'spin 8s linear infinite',
-          },
-          keyframes: {
-            starFall: {
-              '0%': { transform: 'translateY(-20px) scale(0)', opacity: '0' },
-              '20%': { opacity: '1' },
-              '100%': { transform: 'translateY(100px) scale(1.5)', opacity: '0' },
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilgi Çarkı - 4. Sınıf</title>
+    <link rel="manifest" href="./assets/manifest-nLwBMBT-.json" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5726/5726678.png" />
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="color-scheme" content="light">
+    
+    <!-- Güncel Mobile Web App Etiketleri -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Bilgi Çarkı">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Ortam değişkenleri kontrolü ve varsayılan değerler
+      if (typeof process === 'undefined') {
+        window.process = { 
+          env: { 
+            NODE_ENV: 'production',
+            VITE_FIREBASE_API_KEY: '',
+            VITE_FIREBASE_AUTH_DOMAIN: '',
+            VITE_FIREBASE_PROJECT_ID: '',
+            VITE_FIREBASE_STORAGE_BUCKET: '',
+            VITE_FIREBASE_MESSAGING_SENDER_ID: '',
+            VITE_FIREBASE_APP_ID: ''
+          } 
+        };
+      }
+      
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Quicksand', 'sans-serif'],
+              story: ['Lora', 'serif'],
+            },
+            animation: {
+              'bounce-short': 'bounce 0.5s ease-in-out 1',
+              'star-fall': 'starFall 2s ease-out forwards',
+              'spin-slow': 'spin 8s linear infinite',
+            },
+            keyframes: {
+              starFall: {
+                '0%': { transform: 'translateY(-20px) scale(0)', opacity: '0' },
+                '20%': { opacity: '1' },
+                '100%': { transform: 'translateY(100px) scale(1.5)', opacity: '0' },
+              }
             }
           }
         }
       }
-    }
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap&subset=latin-ext');
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f0f9ff !important;
-      color: #111827 !important;
-      overscroll-behavior: none;
-    }
-
-    .font-story {
-      font-family: 'Lora', serif;
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-    .wheel-container {
-      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.15));
-    }
-
-    .star-particle {
-      position: absolute;
-      pointer-events: none;
-    }
-  </style>
-  <script type="module" crossorigin src="./assets/index-mCuUmmRL.js"></script>
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap&subset=latin-ext');
+      
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: #f0f9ff !important;
+        color: #111827 !important;
+        overscroll-behavior: none;
+      }
+      
+      .font-story {
+        font-family: 'Lora', serif;
+      }
+      
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .wheel-container {
+        filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.15));
+      }
+      
+      .star-particle {
+        position: absolute;
+        pointer-events: none;
+      }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "html2canvas": "https://aistudiocdn.com/html2canvas@^1.4.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.2",
+    "fs": "https://aistudiocdn.com/fs@^0.0.1-security",
+    "path": "https://aistudiocdn.com/path@^0.12.7",
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-xiqTxr-N.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-C-n8OdEa.css">
 </head>
-
-<body>
-  <div id="root"></div>
+  <body>
+    <div id="root"></div>
 </body>
-
 </html>
